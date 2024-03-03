@@ -60,13 +60,13 @@ https://chat.openai.com/c/6615286b-1471-44a7-9ff9-0aafd88c0293
 	//calculate function puts counts into proportions and updates p with proper text
 	
 	function calculate(){
+		//into proprtions
 		var heartAttackPercent = heartAttack_count/4*100;
 		var heartBurnPercent = heartBurn_count/4*100;
 
-		//finds elemnet with resutls tag to edit inner text
+		//finds elemenet with resutls tag to edit inner text
 		var resultText = document.getElementById("results");
-		
-		resultText.getElementById("results").innerHTML = "Probability it is a heart attack =" + heartAttackPercent + "%" + "<br> Probability it is a heartBurn =" + heartBurnPercent +"%";
+		resultText.getElementById("results").innerHTML = "Probability it is a heart attack = " + heartAttackPercent + "%" + "<br> Probability it is heartburn = " + heartBurnPercent +"%";
 	}
 
   </script>
@@ -113,7 +113,7 @@ img, object{
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>TTHIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <div id= "content" class"w3-container">
 		<img src="heart.png" alt "Heart">
@@ -126,8 +126,8 @@ img, object{
 	<!--Page One Question, leads to q2-->
     	<div id="content" class="w3-container">
       		<p>Is the pain primarily in your chest, as opposed to pain radiation?</p> 
-			<a href="#two" onclick="heartAttackAdd();" class="w3-btn w3-black"> Yes </a>
-			<a href="#two" onclick="heartBurnAdd();" class="w3-btn w3-black"> No </a>
+			<a href="#two" onclick="heartAttackAdd();" class="w3-btn w3-black"> Yes </a> <!--adds to heart attack counter if clicked-->
+			<a href="#two" onclick="heartBurnAdd();" class="w3-btn w3-black"> No </a> <!--adds to heartburn counter if clicked-->
     	</div>
 </div>
 
@@ -138,8 +138,8 @@ img, object{
 	<!--Page Two Question, leads to q3-->
 	<div id="content" class="w3-container">
 		<p>Has the pain been lingering for more than half an hour?</p>
-		<a href="#three" onclick="heartBurnAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#three" onclick="heartAttackAdd();" class="w3-btn w3-black"> No </a>
+		<a href="#three" onclick="heartBurnAdd();" class="w3-btn w3-black"> Yes </a> <!--adds to heartburn counter if clicked-->
+		<a href="#three" onclick="heartAttackAdd();" class="w3-btn w3-black"> No </a> <!--adds to heart attack counter if clicked-->
 	</div>
 </div>	
 
@@ -150,8 +150,8 @@ img, object{
 	<!--Page Three Question, leads to q4-->
 	<div id="content" class="w3-container">
 		<p>Have you recently eaten something spicy or acidic?</p>
-		<a href="#four" onclick="heartBurnAdd();" class="w3-btn w3-black"> Yes </a>
-		<a href="#four" onclick="heartAttackAdd();" class="w3-btn w3-black"> No </a>
+		<a href="#four" onclick="heartBurnAdd();" class="w3-btn w3-black"> Yes </a> <!--adds to heartburn counter if clicked-->
+		<a href="#four" onclick="heartAttackAdd();" class="w3-btn w3-black"> No </a> <!--adds to heart attack counter if clicked-->
 	</div>
 </div>	
 
@@ -162,10 +162,10 @@ img, object{
 	<!--Page Four Question, also displays results with results button-->
 	<div id="content" class="w3-container">
 		<p>Are your experiencing lightheadedness or dizziness?</p>
-		<a onclick="heartAttackAdd();" class="w3-btn w3-black"> Yes </a>
-		<a onclick="heartBurnAdd();" class="w3-btn w3-black"> No </a>
+			<a onclick="heartAttackAdd();" class="w3-btn w3-black"> Yes </a> <!--adds to heart attack counter if clicked-->
+			<a onclick="heartBurnAdd();" class="w3-btn w3-black"> No </a> <!--adds to heartburn counter if clicked-->
 		<!--Results button to update p below-->
-		<a onclick="calculate();" class="w3-btn w3-black"> Calculate Results </a>
+			<a onclick="calculate();" class="w3-btn w3-black"> Calculate Results </a>
 		<!--Results displayed below-->
 		<p id="results"></p>
 </div>	
