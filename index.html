@@ -62,7 +62,7 @@ https://chat.openai.com/c/6615286b-1471-44a7-9ff9-0aafd88c0293
 	function calculate(){
 		var heartAttackPercent = heartAttack_count/4*100;
 		var heartBurnPercent = heartBurn_count/4*100;
-		resultText.innerHTML = "Probability it is allergies =" + heartAttackPercent + "%" + "<br> Probability it is a heartBurn =" + heartBurnPercent +"%";
+		resultText.innerHTML = "Probability it is a heart attack =" + heartAttackPercent + "%" + "<br> Probability it is a heartBurn =" + heartBurnPercent +"%";
 	}
 
   </script>
@@ -93,7 +93,7 @@ https://chat.openai.com/c/6615286b-1471-44a7-9ff9-0aafd88c0293
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>heartBurn or Allergies?</h1>
+	<h1>Heart Attack or Heartburn?</h1>
 </div>
 	
 <div id="content" class="w3-container">
@@ -105,15 +105,19 @@ https://chat.openai.com/c/6615286b-1471-44a7-9ff9-0aafd88c0293
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+<div id= "content" class"w3-container">
+		<!--img src="tbd" alt "Picture"-->
+</div>
+	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	<!--Page One Question, leads to q2-->
     	<div id="content" class="w3-container">
-        <p>Is the pain primarily in your chest, as opposed to pain radiation?</p> 
-	<a href="#two" onclick="heartAttackAdd();" class="w3-btn w3-black"> Yes </a>
-	<a href="#two" onclick="heartBurnAdd();" class="w3-btn w3-black"> No </a>
+      		<p>Is the pain primarily in your chest, as opposed to pain radiation?</p> 
+			<a href="#two" onclick="heartAttackAdd();" class="w3-btn w3-black"> Yes </a>
+			<a href="#two" onclick="heartBurnAdd();" class="w3-btn w3-black"> No </a>
     	</div>
 </div>
 
