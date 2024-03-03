@@ -62,7 +62,7 @@ https://chat.openai.com/c/6615286b-1471-44a7-9ff9-0aafd88c0293
 	function calculate(){
 		var heartAttackPercent = heartAttack_count/4*100;
 		var heartBurnPercent = heartBurn_count/4*100;
-		resultText.innerHTML = "Probability it is a heart attack =" + heartAttackPercent + "%" + "<br> Probability it is a heartBurn =" + heartBurnPercent +"%";
+		document.getElementById("results").innerHTML = "Probability it is a heart attack =" + heartAttackPercent + "%" + "<br> Probability it is a heartBurn =" + heartBurnPercent +"%";
 	}
 
   </script>
